@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+  <!-- VIEWPORT -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- AUTHOR and GENERATOR -->
+    <meta name="author" content="SketchUp Extensibility Team">
+    <meta name="generator" content="YARD http://yardoc.org">
+  <!-- TITLE -->
+    <title>
+    类: UI::Command &mdash; SketchUp Ruby API Documentation
+    </title>
+  <!-- SHORTCUT ICON -->
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon"
+    href="https://help.sketchup.com/sites/all/themes/sketch_help/favicon.ico" />
+
+  <!-- GENERIC META PROPERTIES -->
+    <meta name="url"   content="http://ruby.sketchup.com/UI/Command.html" />
+    <meta name="image" content="http://developer.sketchup.com/sites/developers.sketchup.com/files/Ruby.svg?s=60" />
+    <meta name="title" content="类: UI::Command" />
+    <meta name="name"  content="SketchUp Ruby API Documentation" />
+    <meta name="description" content="Command类是向菜单和Ruby工具栏添加工具的首选类。" />
+  <!-- OPEN GRAPH META PROPERTIES -->
+    <meta property="og:site_name" content="SketchUp Ruby API Documentation" />
+    <meta property="og:type"      content="website" />
+    <meta property="og:image"     content="http://developer.sketchup.com/sites/developers.sketchup.com/files/Ruby.svg" />
+    <meta property="og:image:width"  content="60" />
+    <meta property="og:image:height" content="60" />
+    <meta property="og:title"     content="类: UI::Command" />
+    <meta property="og:url"       content="http://ruby.sketchup.com/UI/Command.html" />
+    <meta property="og:description" content="Command类是向菜单和Ruby工具栏添加工具的首选类。" />
+  <!-- TWITTER CARD META PROPERTIES -->
+    <meta name="twitter:card"  content="summary"   />
+    <meta name="twitter:site"  content="@sketchup" />
+    <meta name="twitter:title" content="类: UI::Command" />
+    <meta name="twitter:description" content="Command类是向菜单和Ruby工具栏添加工具的首选类。" />
+    <meta name="twitter:image:src"   content="http://developer.sketchup.com/sites/developers.sketchup.com/files/Ruby.svg?s=120" />
+    <meta name="twitter:url"   content="http://ruby.sketchup.com/UI/Command.html" />
+  <!-- STYLESHEETS -->
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" />
+
+    <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+    <link rel="stylesheet" href="../css/sketchup.css" type="text/css" charset="utf-8" />
+
+    <link rel="stylesheet" href="../css/rubyapi.css" type="text/css" charset="utf-8" />
+
+  <!-- SCRIPTS -->
+<script type="text/javascript" charset="utf-8">
+  pathId = "UI::Command";
+  relpath = '../';
+</script>
+
+
+    <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+    <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+    <script>
+      // Every time this page is loaded, it sends this action to SketchUp, telling
+      // SketchUp that a new page has loaded that has example snippets that should
+      // be replaced with code editors. Nothing happens if the page is loaded in a
+      // regular browser outside of the SketchUp client.
+      $( document ).ready(function() {
+        if (typeof sketchup == 'object') {
+          sketchup.page_loaded();
+        }
+      });
+    </script>
+
+</head>
+<body>
+
+  <!-- SU - start -->
+<header id="navbar" role="banner" class="navbar navbar-fixed-top navbar-inverse">
+    <div id="api-documentation-header">
+        <div class="navbar-header">
+            <a class="logo navbar-btn pull-left" href="http://developer.sketchup.com" title="Home">
+                <img src="http://developer.sketchup.com/sites/help.sketchup.com/files/SU_Developer-RedWhite.png" alt="Home">
+            </a>
+            <a class="name navbar-brand" href="/en" title="Home">SketchUp Developer Center</a>
+            <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <nav role="navigation">
+                <ul class="menu nav navbar-nav">
+                    <li class="first leaf"><a href="http://forums.sketchup.com/c/developers">Community</a></li>
+                    <li class="leaf"><a href="http://blog.sketchup.com/tags/developers">SketchUpdate Blog</a></li>
+                    <li class="leaf"><a href="http://www.sketchup.com/download" class="top-menu--download-button">Download</a></li>
+                    <li class="last expanded dropdown">
+                        <a href="http://www.trimble.com" class="trimble-top-menu-item dropdown-toggle" data-target="#" data-toggle="dropdown"><img src="http://www.sketchup.com/sites/developers.sketchup.com/files/core/trimble-logo-white.png"><span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="first leaf"><a href="http://connect.trimble.com/">Trimble Connect</a></li>
+                            <li class="leaf"><a href="https://www.trimble.com/Corporate/About_Trimble.aspx">About Trimble</a></li>
+                            <li class="last leaf"><a href="http://buildings.trimble.com/">Trimble Buildings</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<!-- SU - end -->
+
+  <div id="su-content">
+
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+
+    <a href="../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span>
+     &raquo;
+    <span class="title">Command</span>
+
+</div>
+
+        <div id="search">
+
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>类: UI::Command
+
+
+
+</h1>
+<div class="box_info">
+
+  <dl>
+    <dt>继承:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+
+        <ul class="fullTree">
+          <li>Object</li>
+
+            <li class="next">UI::Command</li>
+
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<h2>概述</h2><div class="docstring">
+  <div class="discussion">
+
+<p>Command类是向菜单和Ruby工具栏添加工具的首选类。例如，您可以添加一个菜单项并直接将其传递给代码块，或者您可以先创建一个Command。</p>
+
+<p>使用Command可以更好地控制项目在UI中的工作方式，并且允许UI中的多个位置调用相同的代码。例如，您可能希望工具栏按钮和上下文单击菜单项都指向同一命令，并从代码中的单个位置控制工具提示及其“灰化”。</p>
+
+
+  </div>
+</div>
+<div class="tags">
+
+  <div class="examples">
+    <p class="tag_title">例子：</p>
+
+
+      <pre class="example code"><code><span class='comment'># 您可以添加菜单项作为程序块，如这里所示，但是您无法控制它是否为灰色。
+</span><span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_menu'><span class='object_link'><a href="../UI.html#menu-class_method" title="UI.menu (method)">menu</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Draw</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_add_item'><span class='object_link'><a href="../Sketchup/Menu.html#add_item-instance_method" title="Sketchup::Menu#add_item (method)">add_item</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>My Procedure</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span>
+  <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_messagebox'><span class='object_link'><a href="../UI.html#messagebox-class_method" title="UI.messagebox (method)">messagebox</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>My Procedure</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='rbrace'>}</span>
+
+<span class='comment'># 最好先创建一个command对象。
+</span><span class='id identifier rubyid_cmd'>cmd</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='op'>::</span><span class='const'>Command</span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#new-class_method" title="UI::Command.new (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Tester</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span>
+  <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_messagebox'><span class='object_link'><a href="../UI.html#messagebox-class_method" title="UI.messagebox (method)">messagebox</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>My Command</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='rbrace'>}</span>
+<span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_menu_text'>menu_text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>My Command</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_set_validation_proc'>set_validation_proc</span> <span class='lbrace'>{</span>
+  <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="../Sketchup.html" title="Sketchup (module)">Sketchup</a></span></span><span class='period'>.</span><span class='id identifier rubyid_active_model'><span class='object_link'><a href="../Sketchup.html#active_model-class_method" title="Sketchup.active_model (method)">active_model</a></span></span><span class='period'>.</span><span class='id identifier rubyid_selection'><span class='object_link'><a href="../Sketchup/Model.html#selection-instance_method" title="Sketchup::Model#selection (method)">selection</a></span></span><span class='period'>.</span><span class='id identifier rubyid_length'><span class='object_link'><a href="../Sketchup/Selection.html#length-instance_method" title="Sketchup::Selection#length (method)">length</a></span></span> <span class='op'>==</span> <span class='int'>0</span>
+    <span class='const'><span class='object_link'><a href="../top-level-namespace.html#MF_GRAYED-constant" title="MF_GRAYED (constant)">MF_GRAYED</a></span></span>
+  <span class='kw'>else</span>
+    <span class='const'><span class='object_link'><a href="../top-level-namespace.html#MF_ENABLED-constant" title="MF_ENABLED (constant)">MF_ENABLED</a></span></span>
+  <span class='kw'>end</span>
+<span class='rbrace'>}</span>
+<span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_menu'><span class='object_link'><a href="../UI.html#menu-class_method" title="UI.menu (method)">menu</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Draw</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_add_item'><span class='object_link'><a href="../Sketchup/Menu.html#add_item-instance_method" title="Sketchup::Menu#add_item (method)">add_item</a></span></span> <span class='id identifier rubyid_cmd'>cmd</span></code></pre>
+
+  </div>
+
+<p class="tag_title">版本：</p>
+<ul class="version">
+
+    <li>
+
+
+
+
+
+        <div class='inline'>
+<p>SketchUp 6.0</p>
+</div>
+
+    </li>
+
+</ul>
+
+</div>
+
+
+
+
+
+
+
+    <h2>
+      类的方法概要
+      <a
+          id="class_method_summary"
+          href="#class_method_summary"
+          title="Permalink">#</a>
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+
+        <li class="public ">
+  <span class="summary_signature">
+
+      <a href="#new-class_method" title="new (class method)">.<strong>new</strong>(menutext) { ... } &#x21d2; UI::Command </a>
+
+
+
+  </span>
+
+
+
+
+
+
+
+
+
+    <span class="summary_desc"><div class='inline'>
+<p>new方法用于创建一个新的命令。</p>
+</div></span>
+
+</li>
+
+
+    </ul>
+
+    <h2>
+      实例方法概要
+      <a
+          id="instance_method_summary"
+          href="#instance_method_summary"
+          title="Permalink">#</a>
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+
+        <li class="public ">
+  <span class="summary_signature">
+
+      <a href="#large_icon-instance_method" title="#large_icon (instance method)">#<strong>large_icon</strong>  &#x21d2; String </a>
+
+
+
+  </span>
+
+
+
+
+
+
+
+
+
+    <span class="summary_desc"><div class='inline'>
+<p>large_icon方法返回命令的大图标的图标文件。</p>
+</div></span>
+
+</li>
+
+
+        <li class="public ">
+  <span class="summary_signature">
+
+      <a href="#large_icon=-instance_method" title="#large_icon= (instance method)">#<strong>large_icon=</strong>(path)  &#x21d2; String </a>
+
+
+
+  </span>
+
+
+
+
+
+
+
+
+
+    <span class="summary_desc"><div class='inline'>
+<p>large_icon= method 用于标识命令的大图标的图标文件。</p>
+</div></span>
+
+</li>
+
+
+        <li class="public ">
+  <span class="summary_signature">
+
+      <a href="#menu_text-instance_method" title="#menu_text (instance method)">#<strong>menu_text</strong>  &#x21d2; String </a>
+
+
+
+  </span>
+
+
+
+
+
+
+
+
+
+    <span class="summary_desc"><div class='inline'>
+<p>menu_text方法返回命令的菜单项名称。</p>
+</div></span>
+
+</li>
+
+
+        <li class="public ">
+  <span class="summary_signature">
+
+      <a href="#menu_text=-instance_method" title="#menu_text= (instance method)">#<strong>menu_text=</strong>(menuitem)  &#x21d2; String </a>
+
+
+
+  </span>
+
+
+
+
+
+
+
+
+
+    <span class="summary_desc"><div class='inline'>
+<p>menu_text = method 用于设置command的菜单项名称。</p>
+</div></span>
+
+</li>
+
+
+        <li class="public ">
+  <span class="summary_signature">
+
+      <a href="#set_validation_proc-instance_method" title="#set_validation_proc (instance method)">#<strong>set_validation_proc</strong> { ... } &#x21d2; UI::Command </a>
+
+
+
+  </span>
+
+
+
+
+
+
+
+
+
+    <span class="summary_desc"><div class='inline'>
+<p>该 <span class='object_link'><a href="#set_validation_proc-instance_method" title="UI::Command#set_validation_proc (method)">#set_validation_proc</a></span> 方法允许你改变是否启用命令，检查等。</p>
+</div></span>
+
+</li>
+
+
+        <li class="public ">
+  <span class="summary_signature">
+
+      <a href="#small_icon-instance_method" title="#small_icon (instance method)">#<strong>small_icon</strong>  &#x21d2; String </a>
+
+
+
+  </span>
+
+
+
+
+
+
+
+
+
+    <span class="summary_desc"><div class='inline'>
+<p>small_icon方法返回命令的小图标的图标文件。</p>
+</div></span>
+
+</li>
+
+
+        <li class="public ">
+  <span class="summary_signature">
+
+      <a href="#small_icon=-instance_method" title="#small_icon= (instance method)">#<strong>small_icon=</strong>(path)  &#x21d2; String </a>
+
+
+
+  </span>
+
+
+
+
+
+
+
+
+
+    <span class="summary_desc"><div class='inline'>
+<p>small_icon= method 用于标识命令的小图标的图标文件。</p>
+</div></span>
+
+</li>
+
+
+        <li class="public ">
+  <span class="summary_signature">
+
+      <a href="#status_bar_text-instance_method" title="#status_bar_text (instance method)">#<strong>status_bar_text</strong>  &#x21d2; String </a>
+
+
+
+  </span>
+
+
+
+
+
+
+
+
+
+    <span class="summary_desc"><div class='inline'>
+<p>status_bar_text方法返回命令的状态栏文本。</p>
+</div></span>
+
+</li>
+
+
+        <li class="public ">
+  <span class="summary_signature">
+
+      <a href="#status_bar_text=-instance_method" title="#status_bar_text= (instance method)">#<strong>status_bar_text=</strong>(text)  &#x21d2; String </a>
+
+
+
+  </span>
+
+
+
+
+
+
+
+
+
+    <span class="summary_desc"><div class='inline'>
+<p>status_bar_text= method 用于设置命令的状态栏文本。</p>
+</div></span>
+
+</li>
+
+
+        <li class="public ">
+  <span class="summary_signature">
+
+      <a href="#tooltip-instance_method" title="#tooltip (instance method)">#<strong>tooltip</strong>  &#x21d2; String </a>
+
+
+
+  </span>
+
+
+
+
+
+
+
+
+
+    <span class="summary_desc"><div class='inline'>
+<p>tooltip方法返回命令项的工具提示文本。</p>
+</div></span>
+
+</li>
+
+
+        <li class="public ">
+  <span class="summary_signature">
+
+      <a href="#tooltip=-instance_method" title="#tooltip= (instance method)">#<strong>tooltip=</strong>(text)  &#x21d2; String </a>
+
+
+
+  </span>
+
+
+
+
+
+
+
+
+
+    <span class="summary_desc"><div class='inline'>
+<p>tooltip= method 用于定义命令项的工具提示文本。</p>
+</div></span>
+
+</li>
+
+
+    </ul>
+
+
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>类方法详细信息</h2>
+
+
+      <div class="method_details first">
+  <h3 class="signature first" id="new-class_method">
+  <a style="float: right;" href="#header" title="Return to Top">&uarr;</a>
+
+    .<strong>new</strong>(menutext) { ... } &#x21d2; <tt><span class='object_link'><a href="" title="UI::Command (class)">UI::Command</a></span></tt>
+
+
+
+
+
+</h3><div class="docstring">
+  <div class="discussion">
+
+<p>new方法用于创建一个新的命令。</p>
+
+
+  </div>
+</div>
+<div class="tags">
+
+  <div class="examples">
+    <p class="tag_title">例子：</p>
+
+
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_menu'><span class='object_link'><a href="../UI.html#menu-class_method" title="UI.menu (method)">menu</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Draw</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_add_separator'><span class='object_link'><a href="../Sketchup/Menu.html#add_separator-instance_method" title="Sketchup::Menu#add_separator (method)">add_separator</a></span></span>
+
+<span class='comment'># 将测试子菜单添加到"绘图"菜单中，Tester菜单项出现在"绘图"菜单中。
+</span><span class='id identifier rubyid_testmenu'>testmenu</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_menu'><span class='object_link'><a href="../UI.html#menu-class_method" title="UI.menu (method)">menu</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Draw</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_add_submenu'><span class='object_link'><a href="../Sketchup/Menu.html#add_submenu-instance_method" title="Sketchup::Menu#add_submenu (method)">add_submenu</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Test</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+<span class='comment'># 该菜单项在点击的时候会显示Hello World。
+</span><span class='id identifier rubyid_cmd'>cmd</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="UI::Command (class)">Command</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Tester</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_messagebox'><span class='object_link'><a href="../UI.html#messagebox-class_method" title="UI.messagebox (method)">messagebox</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello World</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='id identifier rubyid_testmenu'>testmenu</span><span class='period'>.</span><span class='id identifier rubyid_add_item'>add_item</span> <span class='id identifier rubyid_cmd'>cmd</span></code></pre>
+
+  </div>
+
+  <div class="docstring">
+  <div class="discussion">
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">参数:</p>
+<ul class="param">
+
+    <li>
+
+        <span class='name'>menutext</span>
+
+
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+
+
+
+        &mdash;
+        <div class='inline'>
+<p>此命令的菜单项出现在菜单上时将显示的文本。</p>
+</div>
+
+    </li>
+
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+
+    <li>
+
+
+        <span class='type'></span>
+
+
+
+
+        <div class='inline'>
+<p>选择菜单项或工具栏项时执行命令的代码。</p>
+</div>
+
+    </li>
+
+</ul>
+
+</div>
+
+<p class="tag_title">返回:</p>
+<ul class="return">
+
+    <li>
+
+
+        <span class='type'>(<tt><span class='object_link'><a href="" title="UI::Command (class)">UI::Command</a></span></tt>)</span>
+
+
+
+        &mdash;
+        <div class='inline'>
+<p>新的Command对象</p>
+</div>
+
+    </li>
+
+</ul>
+<p class="tag_title">版本：</p>
+<ul class="version">
+
+    <li>
+
+
+
+
+
+        <div class='inline'>
+<p>SketchUp 6.0</p>
+</div>
+
+    </li>
+
+</ul>
+
+</div>
+</div>
+
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>实例方法详细信息</h2>
+
+
+      <div class="method_details first">
+  <h3 class="signature first" id="large_icon-instance_method">
+  <a style="float: right;" href="#header" title="Return to Top">&uarr;</a>
+
+    #<strong>large_icon</strong>  &#x21d2; <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>
+
+
+
+
+
+</h3><div class="docstring">
+  <div class="discussion">
+
+<p>large_icon方法返回命令的大图标的图标文件。</p>
+
+
+
+  </div>
+</div>
+<div class="tags">
+
+  <div class="examples">
+    <p class="tag_title">例子：</p>
+
+
+      <pre class="example code"><code><span class='id identifier rubyid_toolbar'>toolbar</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Toolbar.html" title="UI::Toolbar (class)">Toolbar</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Toolbar.html#new-class_method" title="UI::Toolbar.new (method)">new</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Test</span><span class='tstring_end'>&quot;</span></span>
+<span class='comment'># This command displays Hello World on the screen when clicked
+</span><span class='id identifier rubyid_cmd'>cmd</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="UI::Command (class)">Command</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#new-class_method" title="UI::Command.new (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Test</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_messagebox'><span class='object_link'><a href="../UI.html#messagebox-class_method" title="UI.messagebox (method)">messagebox</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello World</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_small_icon'>small_icon</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ToolPencilSmall.png</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_large_icon'>large_icon</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ToolPencilLarge.png</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_toolbar'>toolbar</span> <span class='op'>=</span> <span class='id identifier rubyid_toolbar'>toolbar</span><span class='period'>.</span><span class='id identifier rubyid_add_item'>add_item</span> <span class='id identifier rubyid_cmd'>cmd</span>
+<span class='id identifier rubyid_toolbar'>toolbar</span><span class='period'>.</span><span class='id identifier rubyid_show'>show</span>
+<span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_large_icon'>large_icon</span></code></pre>
+
+  </div>
+
+<p class="tag_title">返回:</p>
+<ul class="return">
+
+    <li>
+
+
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+
+
+
+        &mdash;
+        <div class='inline'>
+<p>大图标的路径。</p>
+</div>
+
+    </li>
+
+</ul>
+<p class="tag_title">版本：</p>
+<ul class="version">
+
+    <li>
+
+
+
+
+
+        <div class='inline'>
+<p>SketchUp 8.0 M1</p>
+</div>
+
+    </li>
+
+</ul>
+
+</div>
+</div>
+
+      <div class="method_details ">
+  <h3 class="signature " id="large_icon=-instance_method">
+  <a style="float: right;" href="#header" title="Return to Top">&uarr;</a>
+
+    #<strong>large_icon=</strong>(path)  &#x21d2; <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>
+
+
+
+
+
+</h3><div class="docstring">
+  <div class="discussion">
+
+<p>large_icon = method 用于标识命令的大图标的图标文件。大图标应为24x24像素图像，以获得最佳显示质量。</p>
+
+<p>从SketchUp 2016开始，可以为光标提供矢量图像。适用于Windows的SVG格式和适用于OS X的PDF格式。由于矢量图像适用于小图标和大图标尺寸，因此您可以选择仅对两种变体使用一个矢量图像。</p>
+
+
+  </div>
+</div>
+<div class="tags">
+
+  <div class="examples">
+    <p class="tag_title">例子：</p>
+
+
+      <pre class="example code"><code><span class='id identifier rubyid_toolbar'>toolbar</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Toolbar.html" title="UI::Toolbar (class)">Toolbar</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Toolbar.html#new-class_method" title="UI::Toolbar.new (method)">new</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Test</span><span class='tstring_end'>&quot;</span></span>
+<span class='comment'># This command displays Hello World on the screen when clicked
+</span><span class='id identifier rubyid_cmd'>cmd</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="UI::Command (class)">Command</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#new-class_method" title="UI::Command.new (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Test</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_messagebox'><span class='object_link'><a href="../UI.html#messagebox-class_method" title="UI.messagebox (method)">messagebox</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello World</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_small_icon'>small_icon</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ToolPencilSmall.png</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_large_icon'>large_icon</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ToolPencilLarge.png</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_toolbar'>toolbar</span> <span class='op'>=</span> <span class='id identifier rubyid_toolbar'>toolbar</span><span class='period'>.</span><span class='id identifier rubyid_add_item'>add_item</span> <span class='id identifier rubyid_cmd'>cmd</span>
+<span class='id identifier rubyid_toolbar'>toolbar</span><span class='period'>.</span><span class='id identifier rubyid_show'>show</span></code></pre>
+
+  </div>
+
+  <div class="docstring">
+  <div class="discussion">
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">参数:</p>
+<ul class="param">
+
+    <li>
+
+        <span class='name'>path</span>
+
+
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+
+
+
+        &mdash;
+        <div class='inline'>
+<p>大图标的路径。</p>
+</div>
+
+    </li>
+
+</ul>
+
+
+</div>
+
+<p class="tag_title">返回:</p>
+<ul class="return">
+
+    <li>
+
+
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+
+
+
+    </li>
+
+</ul>
+<p class="tag_title">版本：</p>
+<ul class="version">
+
+    <li>
+
+
+
+
+
+        <div class='inline'>
+<p>SketchUp 6.0</p>
+</div>
+
+    </li>
+
+</ul>
+
+</div>
+</div>
+
+      <div class="method_details ">
+  <h3 class="signature " id="menu_text-instance_method">
+  <a style="float: right;" href="#header" title="Return to Top">&uarr;</a>
+
+    #<strong>menu_text</strong>  &#x21d2; <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>
+
+
+
+
+
+</h3><div class="docstring">
+  <div class="discussion">
+
+<p>menu_text方法返回命令的菜单项名称。</p>
+
+
+  </div>
+</div>
+<div class="tags">
+
+  <div class="examples">
+    <p class="tag_title">例子：</p>
+
+
+      <pre class="example code"><code><span class='id identifier rubyid_add_separator_to_menu'><span class='object_link'><a href="../top-level-namespace.html#add_separator_to_menu-instance_method" title="#add_separator_to_menu (method)">add_separator_to_menu</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Draw</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='comment'># Adds a Test submenu to the Draw menu where the Tester menu item appears
+</span><span class='id identifier rubyid_testmenu'>testmenu</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_menu'><span class='object_link'><a href="../UI.html#menu-class_method" title="UI.menu (method)">menu</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Draw</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_add_submenu'><span class='object_link'><a href="../Sketchup/Menu.html#add_submenu-instance_method" title="Sketchup::Menu#add_submenu (method)">add_submenu</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Test</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_cmd'>cmd</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="UI::Command (class)">Command</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#new-class_method" title="UI::Command.new (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Tester</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_messagebox'><span class='object_link'><a href="../UI.html#messagebox-class_method" title="UI.messagebox (method)">messagebox</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello World</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_menu_text'>menu_text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>New String</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_testmenu'>testmenu</span><span class='period'>.</span><span class='id identifier rubyid_add_item'>add_item</span> <span class='id identifier rubyid_cmd'>cmd</span>
+<span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_menu_text'>menu_text</span></code></pre>
+
+  </div>
+
+<p class="tag_title">返回:</p>
+<ul class="return">
+
+    <li>
+
+
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+
+
+
+    </li>
+
+</ul>
+<p class="tag_title">版本：</p>
+<ul class="version">
+
+    <li>
+
+
+
+
+
+        <div class='inline'>
+<p>SketchUp 8.0 M1</p>
+</div>
+
+    </li>
+
+</ul>
+
+</div>
+</div>
+
+      <div class="method_details ">
+  <h3 class="signature " id="menu_text=-instance_method">
+  <a style="float: right;" href="#header" title="Return to Top">&uarr;</a>
+
+    #<strong>menu_text=</strong>(menuitem)  &#x21d2; <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>
+
+
+
+
+
+</h3><div class="docstring">
+  <div class="discussion">
+
+<p>menu_text = method 用于设置command的菜单项名称。</p>
+
+
+  </div>
+</div>
+<div class="tags">
+
+  <div class="examples">
+    <p class="tag_title">例子：</p>
+
+
+      <pre class="example code"><code><span class='id identifier rubyid_add_separator_to_menu'><span class='object_link'><a href="../top-level-namespace.html#add_separator_to_menu-instance_method" title="#add_separator_to_menu (method)">add_separator_to_menu</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Draw</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='comment'># Adds a Test submenu to the Draw menu where the Tester menu item appears
+</span><span class='id identifier rubyid_testmenu'>testmenu</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_menu'><span class='object_link'><a href="../UI.html#menu-class_method" title="UI.menu (method)">menu</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Draw</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_add_submenu'><span class='object_link'><a href="../Sketchup/Menu.html#add_submenu-instance_method" title="Sketchup::Menu#add_submenu (method)">add_submenu</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Test</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_cmd'>cmd</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="UI::Command (class)">Command</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#new-class_method" title="UI::Command.new (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Tester</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_messagebox'><span class='object_link'><a href="../UI.html#messagebox-class_method" title="UI.messagebox (method)">messagebox</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello World</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_menu_text'>menu_text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>New String</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_testmenu'>testmenu</span><span class='period'>.</span><span class='id identifier rubyid_add_item'>add_item</span> <span class='id identifier rubyid_cmd'>cmd</span></code></pre>
+
+  </div>
+
+  <div class="docstring">
+  <div class="discussion">
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">参数:</p>
+<ul class="param">
+
+    <li>
+
+        <span class='name'>menuitem</span>
+
+
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+
+
+
+        &mdash;
+        <div class='inline'>
+<p>表示command的菜单项的字符串。</p>
+</div>
+
+    </li>
+
+</ul>
+
+
+</div>
+
+<p class="tag_title">返回:</p>
+<ul class="return">
+
+    <li>
+
+
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+
+
+
+    </li>
+
+</ul>
+<p class="tag_title">版本：</p>
+<ul class="version">
+
+    <li>
+
+
+
+
+
+        <div class='inline'>
+<p>SketchUp 6.0</p>
+</div>
+
+    </li>
+
+</ul>
+
+</div>
+</div>
+
+      <div class="method_details ">
+  <h3 class="signature " id="set_validation_proc-instance_method">
+  <a style="float: right;" href="#header" title="Return to Top">&uarr;</a>
+
+    #<strong>set_validation_proc</strong> { ... } &#x21d2; <tt><span class='object_link'><a href="" title="UI::Command (class)">UI::Command</a></span></tt>
+
+
+
+
+
+</h3><div class="docstring">
+  <div class="discussion">
+
+<p>该 <span class='object_link'><a href="#set_validation_proc-instance_method" title="UI::Command#set_validation_proc (method)">#set_validation_proc</a></span> 方法允许您更改基于用户状态的命令是否被启用，检查等。例如，除非用户具有当前选择，否则您可能希望禁用您的命令。</p>
+
+
+  </div>
+</div>
+<div class="tags">
+
+  <div class="examples">
+    <p class="tag_title">例子：</p>
+
+
+      <pre class="example code"><code><span class='comment'># Create a command object.
+</span><span class='id identifier rubyid_cmd'>cmd</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="UI::Command (class)">Command</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#new-class_method" title="UI::Command.new (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Tester</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span>
+  <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_messagebox'><span class='object_link'><a href="../UI.html#messagebox-class_method" title="UI.messagebox (method)">messagebox</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>My Command</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='rbrace'>}</span>
+<span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_menu_text'>menu_text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>My Command</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_set_validation_proc'>set_validation_proc</span> <span class='lbrace'>{</span>
+  <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="../Sketchup.html" title="Sketchup (module)">Sketchup</a></span></span><span class='period'>.</span><span class='id identifier rubyid_active_model'><span class='object_link'><a href="../Sketchup.html#active_model-class_method" title="Sketchup.active_model (method)">active_model</a></span></span><span class='period'>.</span><span class='id identifier rubyid_selection'><span class='object_link'><a href="../Sketchup/Model.html#selection-instance_method" title="Sketchup::Model#selection (method)">selection</a></span></span><span class='period'>.</span><span class='id identifier rubyid_length'><span class='object_link'><a href="../Sketchup/Selection.html#length-instance_method" title="Sketchup::Selection#length (method)">length</a></span></span> <span class='op'>==</span> <span class='int'>0</span>
+    <span class='const'><span class='object_link'><a href="../top-level-namespace.html#MF_GRAYED-constant" title="MF_GRAYED (constant)">MF_GRAYED</a></span></span>
+  <span class='kw'>else</span>
+    <span class='const'><span class='object_link'><a href="../top-level-namespace.html#MF_ENABLED-constant" title="MF_ENABLED (constant)">MF_ENABLED</a></span></span>
+  <span class='kw'>end</span>
+<span class='rbrace'>}</span>
+<span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_menu'><span class='object_link'><a href="../UI.html#menu-class_method" title="UI.menu (method)">menu</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Draw</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_add_item'><span class='object_link'><a href="../Sketchup/Menu.html#add_item-instance_method" title="Sketchup::Menu#add_item (method)">add_item</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_cmd'>cmd</span><span class='rparen'>)</span></code></pre>
+
+  </div>
+
+  <div class="docstring">
+  <div class="discussion">
+
+
+  </div>
+</div>
+<div class="tags">
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+
+    <li>
+
+
+        <span class='type'></span>
+
+
+
+
+        <div class='inline'><dl class="rdoc-list label-list"><dt>
+<dd></dd></dl>
+</div>
+
+    </li>
+
+</ul>
+<p class="tag_title">Yield 返回:</p>
+<ul class="yieldreturn">
+
+    <li>
+
+
+        <span class='type'>(<tt>Integer</tt>)</span>
+
+
+
+        &mdash;
+        <div class='inline'>
+<p><code>MF_ENABLED</code>, <code>MF_DISABLED</code>, <code>MF_CHECKED</code>,
+<code>MF_UNCHECKED</code>, or <code>MF_GRAYED</code></p>
+</div>
+
+    </li>
+
+</ul>
+<p class="tag_title">返回:</p>
+<ul class="return">
+
+    <li>
+
+
+        <span class='type'>(<tt><span class='object_link'><a href="" title="UI::Command (class)">UI::Command</a></span></tt>)</span>
+
+
+
+    </li>
+
+</ul>
+
+</div>
+
+<p class="tag_title">版本：</p>
+<ul class="version">
+
+    <li>
+
+
+
+
+
+        <div class='inline'>
+<p>SketchUp 6.0</p>
+</div>
+
+    </li>
+
+</ul>
+
+</div>
+</div>
+
+      <div class="method_details ">
+  <h3 class="signature " id="small_icon-instance_method">
+  <a style="float: right;" href="#header" title="Return to Top">&uarr;</a>
+
+    #<strong>small_icon</strong>  &#x21d2; <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>
+
+
+
+
+
+</h3><div class="docstring">
+  <div class="discussion">
+
+<p>small_icon方法返回命令的小图标的图标文件。</p>
+
+
+  </div>
+</div>
+<div class="tags">
+
+  <div class="examples">
+    <p class="tag_title">例子：</p>
+
+
+      <pre class="example code"><code><span class='id identifier rubyid_toolbar'>toolbar</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Toolbar.html" title="UI::Toolbar (class)">Toolbar</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Toolbar.html#new-class_method" title="UI::Toolbar.new (method)">new</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Test</span><span class='tstring_end'>&quot;</span></span>
+<span class='comment'># This toolbar command displays Hello World on the screen when clicked.
+</span><span class='id identifier rubyid_cmd'>cmd</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="UI::Command (class)">Command</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#new-class_method" title="UI::Command.new (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Tester</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_messagebox'><span class='object_link'><a href="../UI.html#messagebox-class_method" title="UI.messagebox (method)">messagebox</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello World</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_small_icon'>small_icon</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ToolPencilSmall.png</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_large_icon'>large_icon</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ToolPencilLarge.png</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_toolbar'>toolbar</span> <span class='op'>=</span> <span class='id identifier rubyid_toolbar'>toolbar</span><span class='period'>.</span><span class='id identifier rubyid_add_item'>add_item</span> <span class='id identifier rubyid_cmd'>cmd</span>
+<span class='id identifier rubyid_toolbar'>toolbar</span><span class='period'>.</span><span class='id identifier rubyid_show'>show</span>
+<span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_small_icon'>small_icon</span></code></pre>
+
+  </div>
+
+<p class="tag_title">返回:</p>
+<ul class="return">
+
+    <li>
+
+
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+
+
+
+        &mdash;
+        <div class='inline'>
+<p>small_icon的路径</p>
+</div>
+
+    </li>
+
+</ul>
+<p class="tag_title">版本：</p>
+<ul class="version">
+
+    <li>
+
+
+
+
+
+        <div class='inline'>
+<p>SketchUp 8.0 M1</p>
+</div>
+
+    </li>
+
+</ul>
+
+</div>
+</div>
+
+      <div class="method_details ">
+  <h3 class="signature " id="small_icon=-instance_method">
+  <a style="float: right;" href="#header" title="Return to Top">&uarr;</a>
+
+    #<strong>small_icon=</strong>(path)  &#x21d2; <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>
+
+
+
+
+
+</h3><div class="docstring">
+  <div class="discussion">
+
+<p>small_icon= method 用于标识命令的小图标的图标文件。小图标应为16x16像素图像，以获得最佳显示质量。</p>
+
+<p>从SketchUp 2016开始，可以为光标提供矢量图像。适用于Windows的SVG格式和适用于OS X的PDF格式。由于矢量图像适用于小图标和大图标尺寸，因此您可以选择仅对两种变体使用一个矢量图像。</p>
+
+
+  </div>
+</div>
+<div class="tags">
+
+  <div class="examples">
+    <p class="tag_title">例子：</p>
+
+
+      <pre class="example code"><code><span class='id identifier rubyid_toolbar'>toolbar</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Toolbar.html" title="UI::Toolbar (class)">Toolbar</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Toolbar.html#new-class_method" title="UI::Toolbar.new (method)">new</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Test</span><span class='tstring_end'>&quot;</span></span>
+<span class='comment'># This toolbar command displays Hello World on the screen when clicked.
+</span><span class='id identifier rubyid_cmd'>cmd</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="UI::Command (class)">Command</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#new-class_method" title="UI::Command.new (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Tester</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_messagebox'><span class='object_link'><a href="../UI.html#messagebox-class_method" title="UI.messagebox (method)">messagebox</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello World</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_small_icon'>small_icon</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ToolPencilSmall.png</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_large_icon'>large_icon</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ToolPencilLarge.png</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_toolbar'>toolbar</span> <span class='op'>=</span> <span class='id identifier rubyid_toolbar'>toolbar</span><span class='period'>.</span><span class='id identifier rubyid_add_item'>add_item</span> <span class='id identifier rubyid_cmd'>cmd</span>
+<span class='id identifier rubyid_toolbar'>toolbar</span><span class='period'>.</span><span class='id identifier rubyid_show'>show</span></code></pre>
+
+  </div>
+
+  <div class="docstring">
+  <div class="discussion">
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">参数:</p>
+<ul class="param">
+
+    <li>
+
+        <span class='name'>path</span>
+
+
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+
+
+
+        &mdash;
+        <div class='inline'>
+<p>小图标的路径。</p>
+</div>
+
+    </li>
+
+</ul>
+
+
+</div>
+
+<p class="tag_title">返回:</p>
+<ul class="return">
+
+    <li>
+
+
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+
+
+
+    </li>
+
+</ul>
+<p class="tag_title">版本：</p>
+<ul class="version">
+
+    <li>
+
+
+
+
+
+        <div class='inline'>
+<p>SketchUp 6.0</p>
+</div>
+
+    </li>
+
+</ul>
+
+</div>
+</div>
+
+      <div class="method_details ">
+  <h3 class="signature " id="status_bar_text-instance_method">
+  <a style="float: right;" href="#header" title="Return to Top">&uarr;</a>
+
+    #<strong>status_bar_text</strong>  &#x21d2; <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>
+
+
+
+
+
+</h3><div class="docstring">
+  <div class="discussion">
+
+<p>status_bar_text方法返回命令的状态栏文本。</p>
+
+
+  </div>
+</div>
+<div class="tags">
+
+  <div class="examples">
+    <p class="tag_title">例子：</p>
+
+
+      <pre class="example code"><code><span class='id identifier rubyid_toolbar'>toolbar</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Toolbar.html" title="UI::Toolbar (class)">Toolbar</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Toolbar.html#new-class_method" title="UI::Toolbar.new (method)">new</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Test</span><span class='tstring_end'>&quot;</span></span>
+<span class='comment'># This toolbar tool simply displays Hello World on the screen
+</span><span class='comment'># when clicked
+</span><span class='id identifier rubyid_cmd'>cmd</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="UI::Command (class)">Command</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#new-class_method" title="UI::Command.new (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Tester</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_messagebox'><span class='object_link'><a href="../UI.html#messagebox-class_method" title="UI.messagebox (method)">messagebox</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello World</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_small_icon'>small_icon</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ToolPencilSmall.png</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_large_icon'>large_icon</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ToolPencilLarge.png</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_status_bar_text'>status_bar_text</span> <span class='op'>=</span> <span class='gvar'>$tStrings</span><span class='period'>.</span><span class='const'>GetString</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Testing the toolbars class</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_toolbar'>toolbar</span> <span class='op'>=</span> <span class='id identifier rubyid_toolbar'>toolbar</span><span class='period'>.</span><span class='id identifier rubyid_add_item'>add_item</span> <span class='id identifier rubyid_cmd'>cmd</span>
+<span class='id identifier rubyid_toolbar'>toolbar</span><span class='period'>.</span><span class='id identifier rubyid_show'>show</span>
+<span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_status_bar_text'>status_bar_text</span></code></pre>
+
+  </div>
+
+<p class="tag_title">返回:</p>
+<ul class="return">
+
+    <li>
+
+
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+
+
+
+        &mdash;
+        <div class='inline'>
+<p>状态栏文本。</p>
+</div>
+
+    </li>
+
+</ul>
+<p class="tag_title">版本：</p>
+<ul class="version">
+
+    <li>
+
+
+
+
+
+        <div class='inline'>
+<p>SketchUp 8.0 M1</p>
+</div>
+
+    </li>
+
+</ul>
+
+</div>
+</div>
+
+      <div class="method_details ">
+  <h3 class="signature " id="status_bar_text=-instance_method">
+  <a style="float: right;" href="#header" title="Return to Top">&uarr;</a>
+
+    #<strong>status_bar_text=</strong>(text)  &#x21d2; <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>
+
+
+
+
+
+</h3><div class="docstring">
+  <div class="discussion">
+
+<p>status_bar_text= method 用于设置命令的状态栏文本。</p>
+
+
+  </div>
+</div>
+<div class="tags">
+
+  <div class="examples">
+    <p class="tag_title">例子：</p>
+
+
+      <pre class="example code"><code><span class='id identifier rubyid_toolbar'>toolbar</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Toolbar.html" title="UI::Toolbar (class)">Toolbar</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Toolbar.html#new-class_method" title="UI::Toolbar.new (method)">new</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Test</span><span class='tstring_end'>&quot;</span></span>
+<span class='comment'># This toolbar tool simply displays Hello World on the screen when clicked
+</span><span class='id identifier rubyid_cmd'>cmd</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="UI::Command (class)">Command</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#new-class_method" title="UI::Command.new (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Tester</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_messagebox'><span class='object_link'><a href="../UI.html#messagebox-class_method" title="UI.messagebox (method)">messagebox</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello World</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_small_icon'>small_icon</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ToolPencilSmall.png</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_large_icon'>large_icon</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ToolPencilLarge.png</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_status_bar_text'>status_bar_text</span> <span class='op'>=</span> <span class='gvar'>$tStrings</span><span class='period'>.</span><span class='const'>GetString</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Testing the toolbars class</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_toolbar'>toolbar</span> <span class='op'>=</span> <span class='id identifier rubyid_toolbar'>toolbar</span><span class='period'>.</span><span class='id identifier rubyid_add_item'>add_item</span> <span class='id identifier rubyid_cmd'>cmd</span>
+<span class='id identifier rubyid_toolbar'>toolbar</span><span class='period'>.</span><span class='id identifier rubyid_show'>show</span></code></pre>
+
+  </div>
+
+  <div class="docstring">
+  <div class="discussion">
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">参数:</p>
+<ul class="param">
+
+    <li>
+
+        <span class='name'>text</span>
+
+
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+
+
+
+        &mdash;
+        <div class='inline'>
+<p>当光标位于命令菜单项上时，将出现在状态栏上的文本。</p>
+</div>
+
+    </li>
+
+</ul>
+
+
+</div>
+
+<p class="tag_title">返回:</p>
+<ul class="return">
+
+    <li>
+
+
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+
+
+
+    </li>
+
+</ul>
+<p class="tag_title">版本：</p>
+<ul class="version">
+
+    <li>
+
+
+
+
+
+        <div class='inline'>
+<p>SketchUp 6.0</p>
+</div>
+
+    </li>
+
+</ul>
+
+</div>
+</div>
+
+      <div class="method_details ">
+  <h3 class="signature " id="tooltip-instance_method">
+  <a style="float: right;" href="#header" title="Return to Top">&uarr;</a>
+
+    #<strong>tooltip</strong>  &#x21d2; <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>
+
+
+
+
+
+</h3><div class="docstring">
+  <div class="discussion">
+
+<p>tooltip方法返回命令项的工具提示文本。</p>
+
+
+  </div>
+</div>
+<div class="tags">
+
+  <div class="examples">
+    <p class="tag_title">例子：</p>
+
+
+      <pre class="example code"><code><span class='id identifier rubyid_toolbar'>toolbar</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Toolbar.html" title="UI::Toolbar (class)">Toolbar</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Toolbar.html#new-class_method" title="UI::Toolbar.new (method)">new</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Test</span><span class='tstring_end'>&quot;</span></span>
+<span class='comment'># This command displays Hello World on the screen when clicked
+</span><span class='id identifier rubyid_cmd'>cmd</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="UI::Command (class)">Command</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#new-class_method" title="UI::Command.new (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Test</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_messagebox'><span class='object_link'><a href="../UI.html#messagebox-class_method" title="UI.messagebox (method)">messagebox</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello World</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_tooltip'>tooltip</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello World Tool</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_toolbar'>toolbar</span> <span class='op'>=</span> <span class='id identifier rubyid_toolbar'>toolbar</span><span class='period'>.</span><span class='id identifier rubyid_add_item'>add_item</span> <span class='id identifier rubyid_cmd'>cmd</span>
+<span class='id identifier rubyid_toolbar'>toolbar</span><span class='period'>.</span><span class='id identifier rubyid_show'>show</span>
+<span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_tooltip'>tooltip</span></code></pre>
+
+  </div>
+
+<p class="tag_title">返回:</p>
+<ul class="return">
+
+    <li>
+
+
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+
+
+
+        &mdash;
+        <div class='inline'>
+<p>工具提示文本</p>
+</div>
+
+    </li>
+
+</ul>
+<p class="tag_title">版本：</p>
+<ul class="version">
+
+    <li>
+
+
+
+
+
+        <div class='inline'>
+<p>SketchUp 8.0 M1</p>
+</div>
+
+    </li>
+
+</ul>
+
+</div>
+</div>
+
+      <div class="method_details ">
+  <h3 class="signature " id="tooltip=-instance_method">
+  <a style="float: right;" href="#header" title="Return to Top">&uarr;</a>
+
+    #<strong>tooltip=</strong>(text)  &#x21d2; <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>
+
+
+
+
+
+</h3><div class="docstring">
+  <div class="discussion">
+
+<p>tooltip= method 用于定义命令项的工具提示文本。当命令附加到工具栏并且用户将光标悬停在图标上时，将显示工具提示。</p>
+
+
+  </div>
+</div>
+<div class="tags">
+
+  <div class="examples">
+    <p class="tag_title">例子：</p>
+
+
+      <pre class="example code"><code><span class='id identifier rubyid_toolbar'>toolbar</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Toolbar.html" title="UI::Toolbar (class)">Toolbar</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Toolbar.html#new-class_method" title="UI::Toolbar.new (method)">new</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Test</span><span class='tstring_end'>&quot;</span></span>
+<span class='comment'># This command displays Hello World on the screen when clicked
+</span><span class='id identifier rubyid_cmd'>cmd</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="UI::Command (class)">Command</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#new-class_method" title="UI::Command.new (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Test</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='const'><span class='object_link'><a href="../UI.html" title="UI (module)">UI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_messagebox'><span class='object_link'><a href="../UI.html#messagebox-class_method" title="UI.messagebox (method)">messagebox</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello World</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_tooltip'>tooltip</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello World Tool</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_toolbar'>toolbar</span> <span class='op'>=</span> <span class='id identifier rubyid_toolbar'>toolbar</span><span class='period'>.</span><span class='id identifier rubyid_add_item'>add_item</span> <span class='id identifier rubyid_cmd'>cmd</span>
+<span class='id identifier rubyid_toolbar'>toolbar</span><span class='period'>.</span><span class='id identifier rubyid_show'>show</span></code></pre>
+
+  </div>
+
+  <div class="docstring">
+  <div class="discussion">
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">参数:</p>
+<ul class="param">
+
+    <li>
+
+        <span class='name'>text</span>
+
+
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+
+
+
+        &mdash;
+        <div class='inline'>
+<p>工具提示中的的文字。</p>
+</div>
+
+    </li>
+
+</ul>
+
+
+</div>
+
+<p class="tag_title">返回:</p>
+<ul class="return">
+
+    <li>
+
+
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+
+
+
+    </li>
+
+</ul>
+<p class="tag_title">版本：</p>
+<ul class="version">
+
+    <li>
+
+
+
+
+
+        <div class='inline'>
+<p>SketchUp 6.0</p>
+</div>
+
+    </li>
+
+</ul>
+
+</div>
+</div>
+
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+</div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
